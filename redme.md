@@ -1,0 +1,1 @@
+npm i express cors mongoose cors dotenv bcryptjs jsonwebtoken cookie-parser express-async-handler
