@@ -19,6 +19,9 @@ app.use(cors({
     origin: "https://url-shortner-2dr5.onrender.com",
     credentials: true
 }))
+
+app.use(express.static(path.join(__dirname, "dist")))
+
 // app.use(cors())
 
 // routes
