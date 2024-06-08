@@ -13,12 +13,11 @@ app.use(express.json())
 // ^ to access the data of body
 app.use(cookieParser())
 
-// app.use(cors({
-//     // origin: "https://url-shortner-seven-beta.vercel.app/",
-//     // origin: "",
-//     // credentials: true
-// }))
-app.use(cors())
+app.use(cors({
+    origin: "https://url-shortner-98hk.onrender.com",
+    credentials: true
+}))
+// app.use(cors())
 
 // routes
 app.use('/api/v1/auth', require('./routes/authRoute'))
