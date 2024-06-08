@@ -4,6 +4,8 @@ const cors = require('cors')
 const cookieParser = require("cookie-parser")
 const { userProtected, adminProtected } = require('./middleware/protected')
 require('dotenv').config({ path: './.env' })
+const path = require("path")
+
 
 // Db
 mongoose.connect(process.env.MONGO_URL)
