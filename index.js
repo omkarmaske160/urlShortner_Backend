@@ -14,7 +14,7 @@ app.use(express.json())
 app.use(cookieParser())
 
 app.use(cors({
-    origin: "https://url-shortner-98hk.onrender.com",
+    origin: "https://url-shortner-47dltiakg-omkar-s-projects-2480faf9.vercel.app/",
     credentials: true
 }))
 // app.use(cors())
