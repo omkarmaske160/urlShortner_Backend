@@ -14,8 +14,8 @@ app.use(express.json())
 app.use(cookieParser())
 
 app.use(cors({
-    // origin: "https://url-shotner-seven.vercel.app/",
-    origin: "https://url-shortner-seven-beta.vercel.app/",
+    // origin: "https://url-shortner-seven-beta.vercel.app/",
+    origin: "",
     credentials: true
 }))
 
