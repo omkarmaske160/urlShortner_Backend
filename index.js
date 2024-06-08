@@ -15,9 +15,10 @@ app.use(cookieParser())
 
 app.use(cors({
     // origin: "https://url-shortner-seven-beta.vercel.app/",
-    origin: "",
-    credentials: true
+    // origin: "",
+    // credentials: true
 }))
+app.use(cors())
 
 // routes
 app.use('/api/v1/auth', require('./routes/authRoute'))
