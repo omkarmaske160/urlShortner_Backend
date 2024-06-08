@@ -14,7 +14,7 @@ app.use(express.json())
 app.use(cookieParser())
 
 app.use(cors({
-    origin: "https://url-shortner-47dltiakg-omkar-s-projects-2480faf9.vercel.app",
+    origin: "https://url-shortner-2dr5.onrender.com",
     credentials: true
 }))
 // app.use(cors())
@@ -27,14 +27,19 @@ app.use('/api/v1/admin', adminProtected, require('./routes/adminRoute'))
 
 
 // 404 
-app.use("*", (req, res) => {
-    res.status(404).json({ message: "resource not found" })
-})
+// app.use("*", (req, res) => {
+//     res.status(404).json({ message: "resource not found" })
+// })
 
 // Error Handler 
-app.use((err, req, res, next) => {
-    console.log(err)
-    res.status(500).json({ message: err.message || "something went Wrong" })
+// app.use((err, req, res, next) => {
+//     console.log(err)
+//     res.status(500).json({ message: err.message || "something went Wrong" })
+// })
+
+app.use("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "dist", "index.html"))
+
 })
 
 // server
