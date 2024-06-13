@@ -15,10 +15,7 @@ app.use(express.json())
 // ^ to access the data of body
 app.use(cookieParser())
 
-// app.use(cors({
-//     origin: "http://localhost:5173",
-//     credentials: true
-// }))
+
 app.use(cors({
     origin: "https://url-shortner-2dr5.onrender.com",
     credentials: true
@@ -34,17 +31,6 @@ app.use('/api/v1/user', userProtected, require('./routes/userRoutes'))
 app.use('/api/v1/url', require('./routes/urlRoute'))
 app.use('/api/v1/admin', adminProtected, require('./routes/adminRoute'))
 
-
-// 404 
-// app.use("*", (req, res) => {
-//     res.status(404).json({ message: "resource not found" })
-// })
-
-// Error Handler 
-// app.use((err, req, res, next) => {
-//     console.log(err)
-//     res.status(500).json({ message: err.message || "something went Wrong" })
-// })
 
 app.use("*", (req, res) => {
     res.sendFile(path.join(__dirname, "dist", "index.html"))
